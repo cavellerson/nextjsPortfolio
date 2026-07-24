@@ -1,16 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import LabTabs from "./Components/navigation.js"
 
 export const metadata = {
   title: "Cavell Wong - Portfolio",
@@ -21,10 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body> 
-        
-        <Link href="/aboutme">About Me</Link>
-        <Link href="/projects">Projects</Link>
-        {children}
+        <LabTabs/>
       </body>
     </html>
   );
